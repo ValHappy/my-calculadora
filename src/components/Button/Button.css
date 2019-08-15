@@ -1,0 +1,36 @@
+.Button{
+    width: 100px;
+    height: 40px;
+    color:  white;
+    padding: 2px;
+    border: 0.1px solid black;
+}
+
+.Button--number{
+    font-weight: bold;
+    background: black;
+    border: 0.1px solid blue;
+}
+
+.Button--number:hover{
+    background: gray;
+}
+
+.Button--operation{
+    background: darkgrey;
+    border: 0.1px solid purple;
+}
+
+.Button--operation:hover{
+    background: orange;
+}
+
+.Button--controller{
+    font-weight: bold;
+    background: darkgrey;
+    border: 0.1px solid palevioletred;
+}
+
+.Button--controller:hover{
+    background: gray;
+}

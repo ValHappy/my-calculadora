@@ -1,0 +1,17 @@
+body{
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    background: black;
+}
+
+.App{
+    width: 400px;
+    margin: auto;
+}
+
+.Keyboard{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
