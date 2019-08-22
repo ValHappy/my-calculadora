@@ -13,24 +13,28 @@
 }
 
 .Button--number:hover{
-    background: gray;
+    background: blue;
 }
 
 .Button--operation{
-    background: darkgrey;
-    border: 0.1px solid purple;
+    background: black;
+    color: orange;
+    border: 0.1px solid orange;
 }
 
 .Button--operation:hover{
+    color: white;
     background: orange;
 }
 
 .Button--controller{
     font-weight: bold;
-    background: darkgrey;
+    background: black;
     border: 0.1px solid palevioletred;
+    color: palevioletred;
 }
 
 .Button--controller:hover{
-    background: gray;
+    color: white;
+    background: palevioletred;
 }

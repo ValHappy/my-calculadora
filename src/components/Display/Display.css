@@ -1,8 +1,8 @@
 .Display{
     width: 100%;
     margin-top: 10%;
-    background: rgb(66, 66, 66);
-    border: 1px solid black;
+    background:black;
+    border: 0.1px solid  rgb(66, 66, 66);
     box-sizing: border-box;
     text-align: right;
     padding: 1em;
