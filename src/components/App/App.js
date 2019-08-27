@@ -51,6 +51,42 @@ function App() {
     setIsReady(false);
   }
 
+  function handleRemove(remove) {
+    switch (remove) {
+      case 'CE':
+        setCurrentDisplay('0');
+        break;
+
+      case 'C':
+        setFormulaDisplay('');
+        setCurrentDisplay(0);
+        break;
+
+      case '◁':
+        setCurrentDisplay(currentDisplay.length > 1 ? currentDisplay.substr(0, currentDisplay.length - 1) : '0');
+        setResult();
+        break;
+
+      default:
+        break;
+    }
+  }
+
+  function handleControl(control) {
+    switch (control) {
+      case ',':
+        setCurrentDisplay(currentDisplay.includes('.') ? currentDisplay : currentDisplay + '.');
+        break;
+
+      case '±':
+        setCurrentDisplay(parseFloat(currentDisplay) * -1);
+        break;
+
+      default:
+        break;
+    }
+  }
+
   return (
     <div className="App">
 
@@ -61,9 +97,9 @@ function App() {
         current={isReady ? currentDisplay : result} />
 
       <section className="Keyboard">
-        <Button type="controller" value="CE" />
-        <Button type="controller" value="C" />
-        <Button type="controller" value="◁" />
+        <Button type="controller" value="CE" onClick={handleRemove} />
+        <Button type="controller" value="C" onClick={handleRemove} />
+        <Button type="controller" value="◁" onClick={handleRemove} />
         <Button type="operation" value="÷" onClick={handleOperation} />
 
         <Button type="number" value="7" onClick={handleNumber} />
@@ -81,9 +117,9 @@ function App() {
         <Button type="number" value="3" onClick={handleNumber} />
         <Button type="operation" value="+" onClick={handleOperation} />
 
-        <Button type="controller" value="±" />
+        <Button type="controller" value="±" onClick={handleControl} />
         <Button type="number" value="0" onClick={handleNumber} />
-        <Button type="controller" value="," />
+        <Button type="controller" value="," onClick={handleControl} />
         <Button type="operation" value="=" onClick={handleEquals} />
       </section>
     </div>
@@ -109,4 +145,5 @@ function operate(a, operation, b) {
       return b;
   }
 }
+
 export default App;
